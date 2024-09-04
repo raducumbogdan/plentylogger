@@ -14,6 +14,6 @@
 - If you want to log in mysql you should do a `php artisan migrate`
 - You should then configure your `config/plentylogger.php` like our `config/plentylogger.php.example`
 - To add a new driver go to `src/Drivers/` and make sure to treat it correctly in the `src/Providers/PlentyLoggerServiceProvider.php`
-
+- To run unit tests use command `vendor/bin/phpunit --bootstrap vendor/autoload.php tests`
 
 # Have fun !
