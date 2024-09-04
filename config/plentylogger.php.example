@@ -1,0 +1,17 @@
+<?php
+
+return [
+    'drivers' => [
+        'cli',
+        'file',
+        'elk',
+        'mysql',
+    ],
+    'file' => [
+        'path' => storage_path('logs/plenty.log'),
+    ],
+    'elk' => [
+        'hosts' => ['localhost:9200'],
+    ],
+];
+

@@ -1,0 +1,28 @@
+{
+    "name": "plenty/logger",
+    "description": "A logging package made for multiple drivers",
+    "authors": [
+        {
+            "name": "Bogdan Raducu",
+            "email": "raducu.mbogdan@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/database": "^10.48",
+        "phpunit/phpunit": "9.5",
+        "elasticsearch/elasticsearch": "^8.15",
+        "ramsey/uuid": "^4.7"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Plenty\\Logger\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
