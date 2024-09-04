@@ -14,15 +14,30 @@
         "elasticsearch/elasticsearch": "^8.15",
         "ramsey/uuid": "^4.7"
     },
-    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Plenty\\Logger\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Plenty\\Logger\\Providers\\PlentyLoggerServiceProvider"
+            ]
         }
     },
     "config": {
         "allow-plugins": {
             "php-http/discovery": true
         }
-    }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php artisan migrate"
+        ],
+        "post-update-cmd": [
+            "@php artisan migrate"
+        ]
+    },
+    "minimum-stability": "stable"
 }
